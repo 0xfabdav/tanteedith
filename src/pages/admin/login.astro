@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Admin Login - Tante Edith">
+  <main class="admin-shell">
+    <section class="admin-card">
+      <div class="admin-header-actions admin-login-back">
+        <a href="/">Zur Webseite</a>
+      </div>
+      <h2>Admin Login</h2>
+      <form id="login-form" class="admin-form">
+        <label>
+          E-Mail
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          Passwort
+          <input type="password" name="password" required />
+        </label>
+
+        <button type="submit">Einloggen</button>
+        <p class="status-line" id="login-status"></p>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    import { supabase } from "../../lib/supabase";
+
+    const statusEl = document.getElementById("login-status");
+    const form = document.getElementById("login-form") as HTMLFormElement | null;
+
+    const { data } = await supabase.auth.getSession();
+    if (data.session) {
+      window.location.href = "/admin";
+    }
+
+    form?.addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      const email = String(formData.get("email") || "");
+      const password = String(formData.get("password") || "");
+
+      const { error } = await supabase.auth.signInWithPassword({ email, password });
+
+      if (error) {
+        if (statusEl) statusEl.textContent = error.message;
+        return;
+      }
+
+      window.location.href = "/admin";
+    });
+  </script>
+</BaseLayout>

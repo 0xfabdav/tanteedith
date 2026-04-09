@@ -1,0 +1,183 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const galleryImages = [
+  { src: "/assets/gallery/tante-edith-01.jpg", alt: "Eingang von Tante Edith in Karlsruhe" },
+  { src: "/assets/gallery/tante-edith-02.png", alt: "Bulgur und frischer Salat im Mittagstisch" },
+  { src: "/assets/gallery/tante-edith-03.png", alt: "Gemischter Teller mit Bulgur und Fruehlingsrolle" },
+  { src: "/assets/gallery/tante-edith-04.png", alt: "Blick in den Gastraum mit Theke" },
+  { src: "/assets/gallery/tante-edith-05.png", alt: "Aussenansicht am Essenweinstrasse Eck" },
+  { src: "/assets/gallery/tante-edith-06.png", alt: "Thekenbereich mit hausgemachten Speisen" }
+];
+---
+
+<BaseLayout title="Tante Edith - Karlsruhe">
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Tante Edith Startseite">
+      <img src="/assets/logo.png" alt="Tante Edith Logo" />
+      <span>Tante Edith</span>
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <a href="#mittagstisch">Mittagstisch</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#zeiten">Zeiten</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" data-reveal>
+      <div class="hero-copy">
+        <p class="eyebrow">Gute deutsche Hausmannskost in Karlsruhe</p>
+        <h1>Einfach essen. Ehrlich kochen. Nachbarschaft leben.</h1>
+        <p>
+          Bei Tante Edith gibt es werktags frisch gekochten Mittagstisch mit herzhaften Eintoepfen,
+          Ofengerichten, Salaten und warmen Backwaren.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#kontakt">Anfahrt</a>
+          <a class="btn btn-ghost" href="#zeiten">Oeffnungszeiten</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <img src="/assets/gallery/tante-edith-01.jpg" alt="Eingang von Tante Edith" onerror="this.src='/assets/logo.png'" />
+      </figure>
+    </section>
+
+    <section id="mittagstisch" class="menu-preview" data-reveal>
+      <h2>Heute bei uns</h2>
+      <div class="dish-grid">
+        <article>
+          <h3>Hausgemachte Eintoepfe</h3>
+          <p>Von Linsen bis Gemuese: herzhaft, saettigend und jeden Tag frisch.</p>
+        </article>
+        <article>
+          <h3>Warme Theke</h3>
+          <p>Boerek, Fruehlingsrollen, gefuellte Teigtaschen und weitere wechselnde Klassiker.</p>
+        </article>
+        <article>
+          <h3>Frische Beilagen</h3>
+          <p>Salate, eingelegtes Gemuese und hausgemachte Saucen zum Kombinieren.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="galerie" class="gallery" data-reveal>
+      <h2>Einblicke</h2>
+      <p class="section-intro">So sieht Tante Edith aus: von der Theke bis zum Mittagsteller.</p>
+      <div class="gallery-grid">
+        {
+          galleryImages.map((image) => (
+            <figure class="gallery-item">
+              <img src={image.src} alt={image.alt} loading="lazy" onerror="this.src='/assets/logo.png'" />
+            </figure>
+          ))
+        }
+      </div>
+    </section>
+
+    <section id="zeiten" class="hours" data-reveal>
+      <h2>Oeffnungszeiten</h2>
+      <p class="hours-main" id="opening-times">
+        Montag - Freitag 11:30 - 14:30<br />
+        Samstag geschlossen<br />
+        Sonntag geschlossen
+      </p>
+      <p class="notice" id="special-notice">Mittagstisch mit wechselnden Tagesgerichten.</p>
+    </section>
+
+    <section id="kontakt" class="contact" data-reveal>
+      <article class="contact-card">
+        <h2>Kontakt & Anfahrt</h2>
+        <p id="address">Humboldtstrasse 16, 76131 Karlsruhe</p>
+        <p>Mail: <a id="email-link" href="mailto:kontakt@tante-edith.de">kontakt@tante-edith.de</a></p>
+        <p>Telefon: <a id="phone-link" href="tel:+497200000000">wird aktualisiert</a></p>
+      </article>
+
+      <div class="map-shell" aria-label="Karte zu Tante Edith Karlsruhe">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2617.04499361396!2d8.426980177626119!3d49.00972897135305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797078919951e1b%3A0x6ef7141aed9f318a!2sTante%20Edith%20-%20Karlsruhe!5e0!3m2!1sde!2sde!4v1775676383656!5m2!1sde!2sde"
+          width="600"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Google Maps Tante Edith Karlsruhe"
+        ></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-nav">
+      <a href="#top">Nach oben</a>
+      <a href="#mittagstisch">Mittagstisch</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <div class="footer-legal">
+      <a href="/dsvgo">DSVGO</a>
+      <a href="/impressum">Impressum</a>
+      <a href="/admin/login">Admin</a>
+    </div>
+    <p>© 2026 Tante Edith Karlsruhe</p>
+  </footer>
+
+  <script>
+    import { fetchSettings } from "../lib/settings";
+
+    const revealItems = document.querySelectorAll("[data-reveal]");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    revealItems.forEach((item) => observer.observe(item));
+
+    const settings = await fetchSettings();
+    if (settings) {
+      const openingTimesEl = document.getElementById("opening-times");
+      const specialNoticeEl = document.getElementById("special-notice");
+      const addressEl = document.getElementById("address");
+      const emailLink = document.getElementById("email-link") as HTMLAnchorElement | null;
+      const phoneLink = document.getElementById("phone-link") as HTMLAnchorElement | null;
+
+      if (openingTimesEl && settings.opening_times) {
+        openingTimesEl.innerHTML = settings.opening_times
+          .replace(/\\n/g, "\n")
+          .split(/\n+/)
+          .map((line) => line.trim())
+          .filter(Boolean)
+          .map((line) => `<span>${line}</span>`)
+          .join("");
+      }
+
+      if (specialNoticeEl && settings.special_notice) {
+        specialNoticeEl.textContent = settings.special_notice;
+      }
+
+      if (addressEl && settings.address) {
+        addressEl.textContent = settings.address;
+      }
+
+      if (emailLink && settings.email) {
+        emailLink.textContent = settings.email;
+        emailLink.href = `mailto:${settings.email}`;
+      }
+
+      if (phoneLink && settings.phone_number) {
+        phoneLink.textContent = settings.phone_number;
+        phoneLink.href = `tel:${settings.phone_number.replace(/\s+/g, "")}`;
+      }
+
+    }
+  </script>
+</BaseLayout>
