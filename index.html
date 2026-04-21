@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tante Edith - Karlsruhe</title>
+  <meta name="description" content="Tante Edith Karlsruhe" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="Tante Edith Startseite">
+      <img src="public/assets/logo.png" alt="Tante Edith Logo" />
+      <span>Tante Edith</span>
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <a href="#mittagstisch">Mittagstisch</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#zeiten">Zeiten</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" data-reveal>
+      <div class="hero-copy">
+        <p class="eyebrow">Hausmannskost in Karlsruhe</p>
+        <h1>Einfach essen. Ehrlich kochen. Nachbarschaft leben.</h1>
+        <p>
+          Bei Tante Edith gibt es werktags frisch gekochten Mittagstisch mit herzhaften Eintöpfen,
+          Ofengerichten, Salaten und warmen Backwaren.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#kontakt">Anfahrt</a>
+          <a class="btn btn-ghost" href="#zeiten">Öffnungszeiten</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <img src="public/assets/gallery/tante-edith-01.jpg" alt="Eingang von Tante Edith" />
+      </figure>
+    </section>
+
+    <section id="mittagstisch" class="menu-preview" data-reveal>
+      <h2>Heute bei uns</h2>
+      <div class="dish-grid">
+        <article>
+          <h3>Hausgemachte Eintöpfe</h3>
+          <p>Von Linsen bis Gemüse: herzhaft, sättigend und jeden Tag frisch.</p>
+        </article>
+        <article>
+          <h3>Warme Theke</h3>
+          <p>Börek, Frühlingsrollen, gefüllte Teigtaschen und weitere wechselnde Klassiker.</p>
+        </article>
+        <article>
+          <h3>Frische Beilagen</h3>
+          <p>Salate, eingelegtes Gemüse und hausgemachte Saucen zum Kombinieren.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="galerie" class="gallery" data-reveal>
+      <h2>Einblicke</h2>
+      <p class="section-intro">Von der Theke bis zum Mittagsteller.</p>
+      <div class="gallery-grid">
+        <figure class="gallery-item"><img src="public/assets/gallery/tante-edith-01.jpg" alt="Eingang von Tante Edith"
+            loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="public/assets/gallery/tante-edith-02.jpg" alt="Bulgur und Salat"
+            loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="public/assets/gallery/tante-edith-03.jpg" alt="Gemischter Mittagsteller"
+            loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="public/assets/gallery/tante-edith-04.png" alt="Gastraum und Theke"
+            loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="public/assets/gallery/tante-edith-05.png" alt="Aussenansicht"
+            loading="lazy" /></figure>
+        <figure class="gallery-item"><img src="public/assets/gallery/tante-edith-06.png" alt="Thekenbereich mit Speisen"
+            loading="lazy" /></figure>
+      </div>
+    </section>
+
+    <section id="zeiten" class="hours" data-reveal>
+      <h2>Öffnungszeiten</h2>
+      <pre class="hours-main" id="opening-times">
+        Montag 11:30–14:30
+        Dienstag 11:30–14:30
+        Mittwoch 11:30–14:30
+        Donnerstag 11:30–14:30
+        Freitag 11:30–14:30
+        Samstag Geschlossen
+        Sonntag Geschlossen
+      </pre>
+    </section>
+
+    <section id="kontakt" class="contact" data-reveal>
+      <article class="contact-card">
+        <h2>Kontakt & Anfahrt</h2>
+        <p id="address">Humboldtstraße 16, 76131 Karlsruhe</p>
+        <p>Mail: <a id="email-link" href="mailto:XXXXXX">folgt</a></p>
+        <p>Telefon: <a id="phone-link" href="tel:XXXXXX">folgt</a></p>
+      </article>
+
+      <div class="map-shell" aria-label="Karte zu Tante Edith Karlsruhe">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2617.04499361396!2d8.426980177626119!3d49.00972897135305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4797078919951e1b%3A0x6ef7141aed9f318a!2sTante%20Edith%20-%20Karlsruhe!5e0!3m2!1sde!2sde!4v1775676383656!5m2!1sde!2sde"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Google Maps Tante Edith Karlsruhe"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-nav">
+      <a href="#top">Nach oben</a>
+      <a href="#mittagstisch">Mittagstisch</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <div class="footer-legal">
+      <a href="#">DSVGO</a>
+      <a href="#">Impressum</a>
+    </div>
+    <p>© 2026 Tante Edith Karlsruhe</p>
+  </footer>
+
+  <script>
+    const revealItems = document.querySelectorAll("[data-reveal]");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {threshold: 0.2}
+    );
+    revealItems.forEach((item) => observer.observe(item));
+  </script>
+</body>
+
+</html>

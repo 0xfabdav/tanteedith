@@ -29,9 +29,7 @@ body {
 
 main,
 .site-header,
-footer,
-.legal-content,
-.admin-shell {
+footer {
   width: min(1080px, calc(100% - 1.5rem));
   margin-left: auto;
   margin-right: auto;
@@ -70,13 +68,6 @@ footer,
 .brand span {
   font-family: Bitter, Georgia, serif;
   font-size: clamp(1.4rem, 2.6vw, 1.7rem);
-}
-
-.wordmark {
-  color: var(--ink);
-  text-decoration: none;
-  font-family: Bitter, Georgia, serif;
-  font-size: 1.6rem;
 }
 
 nav {
@@ -284,10 +275,6 @@ p {
   line-height: 1.4;
 }
 
-.hours-main span {
-  display: block;
-}
-
 .notice {
   margin: 0.7rem 0 0;
   color: var(--muted);
@@ -349,76 +336,6 @@ footer p {
 [data-reveal].in-view {
   opacity: 1;
   transform: translateY(0);
-}
-
-.legal-content,
-.admin-card {
-  margin-top: 1.25rem;
-  padding: 1rem;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  background: var(--paper);
-}
-
-.contact-wrap {
-  width: min(1080px, calc(100% - 1.5rem));
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.admin-shell.hidden {
-  display: none;
-}
-
-.admin-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.admin-header-actions,
-.admin-login-back {
-  display: flex;
-  gap: 0.6rem;
-  align-items: center;
-}
-
-.admin-form {
-  margin-top: 1rem;
-  display: grid;
-  gap: 0.75rem;
-}
-
-.admin-form label {
-  display: grid;
-  gap: 0.3rem;
-  font-weight: 600;
-}
-
-.admin-form input,
-.admin-form textarea,
-.admin-form button,
-#logout-btn {
-  font: inherit;
-  border-radius: 10px;
-  border: 1px solid #cfbaa0;
-  padding: 0.55rem 0.7rem;
-}
-
-.admin-form button,
-#logout-btn {
-  width: fit-content;
-  font-weight: 700;
-  background: var(--brand);
-  color: #fff;
-  border-color: var(--brand);
-  cursor: pointer;
-}
-
-.status-line {
-  margin: 0;
-  color: var(--muted);
 }
 
 @media (min-width: 760px) {
