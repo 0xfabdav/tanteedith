@@ -273,6 +273,8 @@ p {
   margin: 0.9rem 0 0;
   font-weight: 600;
   line-height: 1.4;
+  font-family: Manrope, "Trebuchet MS", sans-serif;
+  white-space: pre-line;
 }
 
 .notice {
